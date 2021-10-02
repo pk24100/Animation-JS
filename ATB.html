@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+
+<html style="height:100%">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+    <style>
+        .ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.7em;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+ 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+ padding: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+    </style>
+<body style = "text-align:center;  background-image: linear-gradient(to bottom right, #1d2671, #c33764   );">
+   
+        <h3>Type Name & Press Enter :   </h3>
+<input id="nameInput"  style="background-position:center center;"></input>
+<button id='enter' class="button" onclick="nameHandler()">Enter</button>
+<p><h2 class="ml7" style="text-align: center;"> <span class="text-wrapper"> Hii <span class="letters" id="nameField"> User</span> </span></h2>
+</p>
+<div id="x" ></div>
+ 
+
+ 
+<script>
+
+function nameHandler(){
+   
+  
+   
+    
+    var nameInput = document.getElementById('nameInput');
+  var nameField = document.getElementById('nameField');
+   var img = document.createElement("img");
+ img.src = "https://c.tenor.com/qBLhezApLcEAAAAi/bt21-wish-you-all-the-best.gif";
+  var src = document.getElementById("x");
+  
+  var speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                speech.volume = 1;
+                speech.rate = 0.9;
+                speech.pitch = 1;
+
+  
+nameField.innerHTML = nameInput.value;
+nameField.style.fontFamily= 'Verdana';
+
+  
+  if (nameInput.value.includes('arya',0)){
+      setTimeout(text, 0000);
+       setTimeout(image, 6500);
+      nameField.innerHTML = 'Aarya';
+      speech.text = 'Hii Aarya, All The Best for upcoming MHT-CET Exam!';
+  window.speechSynthesis.speak(speech);
+  
+  
+ 
+  
+  function text() {
+ nameField.innerHTML = 'Aarya, All The Best for upcoming MHT-CET Exam!';
+ 
+ var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 100 * i
+  });
+}
+   
+   function image(){
+         src.appendChild(img);}
+   }
+ 
+  
+   else if (nameInput.value.includes('ruddh',0)){
+        setTimeout(image, 6500);
+  nameField.innerHTML = 'Co-Founder, All The Best for upcoming MHT-CET Exam!';
+  speech.text = 'Hii Co-Founder, All The Best for upcoming MHT-CET Exam!';
+  window.speechSynthesis.speak(speech);
+  
+   var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 90*i
+  });
+  
+   function image(){
+         src.appendChild(img); }
+       
+   }
+  
+  else if (nameInput.value.includes('chit',0)){
+      setTimeout(image, 6500);
+  nameField.innerHTML = 'Future Doctor, All The Best for upcoming NEET Exam!';
+  speech.text = 'Hii Future Doctor, All The Best for upcoming NEET Exam!';
+  window.speechSynthesis.speak(speech);
+     var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 90*i
+  });
+  
+   function image(){
+         src.appendChild(img); }
+       
+   }
+   
+   else if (nameInput.value.includes('aishnavi',0)){
+      setTimeout(image, 6500);
+  nameField.innerHTML = 'Vaishnavi, All The Best for upcoming NEET Exam!';
+  speech.text = 'Hii Vaishnavi, All The Best for upcoming NEET Exam!';
+  window.speechSynthesis.speak(speech);
+     var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml7 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 90*i
+  });
+  
+   function image(){
+         src.appendChild(img); }
+       
+   }
+  
+   else if (nameInput.value.includes('tuja',0)){
+  nameField.innerHTML = 'Bhutin, zhop ata! Lai kirkiri karu nako!';
+    src.appendChild(img);
+       
+   }
+    
+}
+
+ 
+
+ 
+
+</script>
+</body>
+</html>
